@@ -22,7 +22,7 @@ export const putDb = async (content) => {
 };
 
 export const getDb = async () => {
-  console.log("GET fromt the database");
+  console.log("GET from the database");
 
   const jateDb = await openDB("jate", 1);
   const tx = jateDb.transaction("jate", "readonly");
