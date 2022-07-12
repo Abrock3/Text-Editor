@@ -18,7 +18,7 @@ export const putDb = async (content) => {
   const tx = jateDb.transaction("jate", "readwrite");
   const store = tx.objectStore("jate");
   const result = await store.put({ id: 1, value: content });
-  console.log("Data saved to the database", result.value);
+  console.log("Data saved to the database", result);
 };
 
 export const getDb = async () => {
@@ -29,7 +29,7 @@ export const getDb = async () => {
   const store = tx.objectStore("jate");
   const result = await store.get(1);
   result
-    ? console.log("Data retrieved from the database", result.value)
+    ? console.log("Data retrieved from the database", result)
     : console.log("Data not found in the database");
   return result?.value;
 };
