@@ -29,6 +29,8 @@ export default class {
       this.editor.setValue(data || localData || header);
     });
 
+    // Every time the content of the editor changes, this event listener will save the contents of the editor
+    // to local storage
     this.editor.on("change", () => {
       localStorage.setItem("content", this.editor.getValue());
     });
@@ -38,6 +40,7 @@ export default class {
       console.log("The editor has lost focus");
       putDb(localStorage.getItem("content"));
     });
+
     // Saves content when the page is closed
     window.addEventListener("beforeunload", function (e) {
       putDb(localStorage.getItem("content"));

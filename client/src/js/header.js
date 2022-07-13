@@ -1,3 +1,4 @@
+// Default starting value of the text editor
 const header = `
 /*
        _____  ____________
