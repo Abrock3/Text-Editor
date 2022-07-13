@@ -32,7 +32,7 @@ export const getDb = async () => {
   const store = tx.objectStore("jate");
   const result = await store.get(1);
   result
-    ? console.log("Data retrieved from the database", result)
+    ? console.log("Data retrieved from the database", result.value)
     : console.log("Data not found in the database");
   return result?.value;
 };
