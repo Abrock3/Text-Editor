@@ -6,7 +6,7 @@ export default class {
   constructor() {
     const localData = localStorage.getItem("content");
 
-    // check if CodeMirror is loaded
+    // Check if CodeMirror is loaded
     if (typeof CodeMirror === "undefined") {
       throw new Error("CodeMirror is not loaded");
     }
@@ -22,6 +22,9 @@ export default class {
       tabSize: 2,
     });
 
+    // Sets the size of the CodeMirror editor to the height of the screen minus 50px (50px is the size of the header)
+    this.editor.setSize(null, "calc(100vh - 50px)");
+
     // When the editor is ready, set the value to whatever is stored in indexeddb.
     // Fall back to localStorage if nothing is stored in indexeddb, and if neither is available, set the value to header.
     getDb().then((data) => {
@@ -29,8 +32,8 @@ export default class {
       this.editor.setValue(data || localData || header);
     });
 
-    // Every time the content of the editor changes, this event listener will save the contents of the editor
-    // to local storage
+    // Every time the content of the editor changes,
+    // this event listener will save the contents of the editor to local storage
     this.editor.on("change", () => {
       localStorage.setItem("content", this.editor.getValue());
     });

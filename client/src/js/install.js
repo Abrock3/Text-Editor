@@ -1,6 +1,6 @@
 const butInstall = document.getElementById("buttonInstall");
 
-//
+
 window.addEventListener("beforeinstallprompt", (event) => {
   // Saves the "beforeInstallPromptEvent" event to the window object to be used later, at a time of the user's choosing
   window.deferredPrompt = event;
