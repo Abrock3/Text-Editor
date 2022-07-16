@@ -14,7 +14,7 @@ const initdb = async () =>
   });
 
 // This will write the data in the content parameter to the 1 key in the jate database.
-// in our case, the argument that gets passed in will be retrieved from local storage
+// in our case, the argument that gets passed in will be what's retrieved from local storage
 export const putDb = async (content) => {
   console.log("PUT to the database");
   const jateDb = await openDB("jate", 1);

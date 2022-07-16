@@ -10,19 +10,19 @@ window.addEventListener("beforeinstallprompt", (event) => {
 
 // listens for the user to click the install button
 butInstall.addEventListener("click", async () => {
-  // retrieves the "beforeInstallPromptEvent" stored above
+  // Retrieves the "beforeInstallPromptEvent" stored above
   const promptEvent = window.deferredPrompt;
-  // returns if the window didn't have deferredPrompt within it
+  // Returns if the window didn't have deferredPrompt within it
   if (!promptEvent) {
     return;
   }
-  // prompts the user to install the PWA
+  // Prompts the user to install the PWA
   promptEvent.prompt();
-  // sets deferredPrompt to null so it can be garbage collected
+  // Sets deferredPrompt to null so it can be garbage collected
   window.deferredPrompt = null;
 });
 
-// once the app is installed, the install button gets hidden and deferredPrompt gets 
+// Once the app is installed, the install button gets hidden and deferredPrompt gets 
 window.addEventListener("appinstalled", (event) => {
   butInstall.classList.add("hidden");
   window.deferredPrompt = null;
