@@ -28,7 +28,8 @@ J.A.T.E (Just Another Text Editor) is a simple PWA that you can either use from 
 
 Because the editor was created with CodeMirror, it will also format your text depending on what you type; for example you can use /\*your text here\*/ to produce a comment in gray text, in addition numbers will be formatted blue to make it easier to differentiate them.
 
-Screenshots of the app during function:
+Screenshot of the app during function:
+
 ![Screenshot](images/Screenshot.jpg?raw=true "Screenshot")
 
 ## Credits
