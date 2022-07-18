@@ -48,5 +48,9 @@ export default class {
     window.addEventListener("beforeunload", function (e) {
       putDb(localStorage.getItem("content"));
     });
+    // Saves content when a browser action is taken (back button and forward button)
+    window.addEventListener("popstate", function (e) {
+      putDb(localStorage.getItem("content"));
+    });
   }
 }
