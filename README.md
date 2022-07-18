@@ -26,7 +26,7 @@ Link to the deployed app: https://original-name.herokuapp.com/.
 
 J.A.T.E (Just Another Text Editor) is a simple PWA that you can either use from the browser without installing it, or you can install it to access it from your desktop if desired. Using JATE, you can pick up where you left off easily, editing text and saving it automatically every time anything is changed. Once you've visited the site once it will be cached so you can access it again, even offline.
 
-Because the editor was created with CodeMirror, it will also format your text depending on what you type; for example you can use /\*your text here\*/ to produce a comment in gray text, in addition numbers will be formatted blue to make it easier to differentiate them.
+Because the editor was created with CodeMirror, it will also format your text depending on what you type; for example, you can use /\*your text here\*/ to produce a comment in gray text.
 
 Screenshot of the app during function:
 
